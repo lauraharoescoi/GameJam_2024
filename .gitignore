@@ -55,6 +55,7 @@ Thumbs.db
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+*.meta
 sysinfo.txt
 *.apk
 *.unitypackage
