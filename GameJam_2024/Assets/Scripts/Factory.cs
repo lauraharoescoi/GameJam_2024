@@ -10,6 +10,8 @@ public class FactoryScript : MonoBehaviour
     public float processingTime;
     private float timer;
 
+    public GameObject metalObject;
+
     public void Start()
     {
         processing = false;
@@ -47,7 +49,9 @@ public class FactoryScript : MonoBehaviour
                 minerals = 0;
                 processing = false;
                 GetComponent<SpriteRenderer>().color = Color.white;
-                //generar metall
+                Vector2 spawnPosition = new Vector2(2.39f, 0.12f);
+                Instantiate(metalObject, spawnPosition, Quaternion.identity);
+        
             }
         }
     }

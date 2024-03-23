@@ -7,12 +7,17 @@ public class PersonatgeScr : MonoBehaviour
 {
 
     private bool hasMineral = false;
+    private bool hasMetal = false;
+    //sprite of the player with a mineral
+    public Sprite holdingMineralSprite;
+    public Sprite holdingMetalSprite;
+    public Sprite normalSprite;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<SpriteRenderer>().sprite = normalSprite;
     }
 
     // Update is called once per frame
@@ -22,22 +27,34 @@ public class PersonatgeScr : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Mineral") && !hasMineral)
+        if (collision.CompareTag("Mineral") && !hasMineral && !hasMetal)
         {
             Destroy(collision.gameObject);
-            //minus one mineral from the counter in the MaterialBehavior script
             MaterialBehavior material = GameObject.Find("Material").GetComponent<MaterialBehavior>();
             material.pickMaterial();
-            //change color of the player
-            GetComponent<SpriteRenderer>().color = Color.blue;
+            GetComponent<SpriteRenderer>().sprite = holdingMineralSprite;
+
             hasMineral = true;
         }
-        if (collision.CompareTag("Factory") && hasMineral)
+        if (collision.CompareTag("Factory") && hasMineral && !hasMetal)
         {
             FactoryScript factory = collision.GetComponent<FactoryScript>();
             factory.addMinerals();
             hasMineral = false;
-            GetComponent<SpriteRenderer>().color = Color.white;
+            GetComponent<SpriteRenderer>().sprite = normalSprite;
+        }
+        if (collision.CompareTag("Metal") && !hasMetal && !hasMineral)
+        {
+            Destroy(collision.gameObject);
+            GetComponent<SpriteRenderer>().sprite = holdingMetalSprite;
+            hasMetal = true;
+        }
+        if (collision.CompareTag("Rocket") && hasMetal && !hasMineral)
+        {
+            RocketScript rocket = collision.GetComponent<RocketScript>();
+            rocket.addMetals();
+            hasMetal = false;
+            GetComponent<SpriteRenderer>().sprite = normalSprite;
         }
     }
 

@@ -22,7 +22,7 @@ public class MaterialBehavior : MonoBehaviour
     void Start()
     {
         //Set the spawn time to a random value between 5 and 10 seconds
-        spawnTime = Time.time + Random.Range(5.0f, 10.0f);
+        spawnTime = Time.time + Random.Range(3.0f, 6.0f);
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class MaterialBehavior : MonoBehaviour
             //Spawn the object
             SpawnObject();
             //Reset the spawn time
-            spawnTime = Time.time + Random.Range(5.0f, 10.0f);
+            spawnTime = Time.time + Random.Range(3.0f, 6.0f);
         }
     }
 
