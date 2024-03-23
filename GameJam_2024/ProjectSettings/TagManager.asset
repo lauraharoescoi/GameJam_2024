@@ -36,9 +36,18 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - post_processing
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 3487570865
+    locked: 0
+  - name: Behind
+    uniqueID: 3218222525
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Front
+    uniqueID: 2177269717
     locked: 0
