@@ -61,9 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScrMineral.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\PlanetGravity.cs" />
     <Compile Include="Assets\Scripts\mineral.cs" />
     <Compile Include="Assets\Scripts\SubPlayerScr.cs" />
+    <Compile Include="Assets\Scripts\FactoryScript.cs" />
+    <Compile Include="Assets\Scripts\Hitbox.cs" />
     <Compile Include="Assets\Scripts\Rocket.cs" />
     <Compile Include="Assets\Scripts\ScriptPersonatge.cs" />
   </ItemGroup>
