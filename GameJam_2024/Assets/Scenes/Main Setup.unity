@@ -366,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomObject: {fileID: 5106971522255615871, guid: 70dd2fcfede4cd948bae90123672160b, type: 3}
   spawnTime: 0
-  radius: 4
+  radius: 10
   offset: {x: 0, y: 0}
 --- !u!4 &902461137
 Transform:
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 2138510647}
   m_Layer: 0
   m_Name: Planeta
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -528,7 +528,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

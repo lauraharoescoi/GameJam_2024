@@ -60,11 +60,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.22f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MeteorsScript.cs" />
     <Compile Include="Assets\Scripts\PlanetGravity.cs" />
-    <Compile Include="Assets\MeteorMovement.cs" />
+    <Compile Include="Assets\Scripts\MeteorsScript.cs" />
     <Compile Include="Assets\Scripts\Rocket.cs" />
     <Compile Include="Assets\Scripts\ScriptPersonatge.cs" />
+    <Compile Include="Assets\Scripts\MeteorMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
