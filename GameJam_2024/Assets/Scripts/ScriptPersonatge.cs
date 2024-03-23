@@ -7,8 +7,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     public float moveSpeed;
     // public Transform Personatge;
-
-
     void Start()
     {
         
@@ -26,5 +24,6 @@ public class NewBehaviourScript : MonoBehaviour
 		transform.eulerAngles += new Vector3(0, 0, (-moveSpeed * Input.GetAxis("Horizontal")) * Time.deltaTime);
 		// Personatge.localEulerAngles = new Vector3(0, 0, Input.GetAxis("Horizontal") * -30);
 	}
+
 
 }
