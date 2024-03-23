@@ -9,6 +9,7 @@ public class MeteorsScript : MonoBehaviour
     //Create a random object that spawns at a random location
     public GameObject meteor;
     public GameObject dangerSign;
+    public GameObject fireMeteor;
 
     //Create a spawn time for the object
     public float spawnTime;
@@ -21,6 +22,7 @@ public class MeteorsScript : MonoBehaviour
     private float limitMeteors = 1;
 
     private float counter = 0;
+    
 
    
     void Start()
@@ -53,6 +55,7 @@ public class MeteorsScript : MonoBehaviour
             Vector2 spawnPositionDanger = coor * radiusDangerSign + offset;
             Instantiate(meteor, spawnPositionMeteor, Quaternion.identity);
             Instantiate(dangerSign, spawnPositionDanger, Quaternion.identity);
+            Instantiate(fireMeteor, transform.position, Quaternion.identity);
             counter++;
         }
 
@@ -63,3 +66,4 @@ public class MeteorsScript : MonoBehaviour
         counter--;
     }
 }
+

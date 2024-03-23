@@ -14,8 +14,19 @@ public class PersonatgeScr : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform FiringPoint;
 
+    public Animator animator;
+    public GameObject newgameObject;
+
     private GameObject interactableObject = null; // Objeto con el que el personaje puede interactuar
 
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        newgameObject = GetComponentInChildren<GameObject>();
+        newgameObject.SetActive(false);
+    }
+
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && hasMineral)
@@ -26,6 +37,16 @@ public class PersonatgeScr : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             InteractWithObject();
+        }
+
+        animator.SetBool("Holding", hasMineral);
+        if (hasMineral == false)
+        {
+            newgameObject.SetActive(false);
+        }
+        else
+        {
+            newgameObject.SetActive(true);
         }
     }
 

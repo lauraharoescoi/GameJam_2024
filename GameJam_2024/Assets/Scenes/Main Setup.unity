@@ -1011,6 +1011,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6098388171477195963, guid: 35b6d9f8a68000b42a03938c5cdbf6eb, type: 3}
+      propertyPath: fireMeteor
+      value: 
+      objectReference: {fileID: 1253142483436318, guid: 110f8e2e0f062434389ce9c4cadf6138, type: 3}
+    - target: {fileID: 6098388171477195963, guid: 35b6d9f8a68000b42a03938c5cdbf6eb, type: 3}
+      propertyPath: meteorFire
+      value: 
+      objectReference: {fileID: 1253142483436318, guid: eb45233c135839f40aa00fabaf52195c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
