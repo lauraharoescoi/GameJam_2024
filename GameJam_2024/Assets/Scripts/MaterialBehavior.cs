@@ -48,4 +48,9 @@ public class MaterialBehavior : MonoBehaviour
         }
 
     }
+
+    public void pickMaterial()
+    {
+        counter--;
+    }
 }
