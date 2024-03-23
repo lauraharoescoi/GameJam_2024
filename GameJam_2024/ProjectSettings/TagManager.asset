@@ -8,6 +8,11 @@ TagManager:
   - Factory
   - Rocket
   - Metal
+  - Undefined
+  - dangerSign
+  - Meteor
+  - Planet
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -32,6 +32,13 @@ public class MeteorMovement : MonoBehaviour
             spawner.destroyMeteor();
             danger.destroySign();
         }
+        if (collision.CompareTag("Bullet"))
+        {
+            Destroy(this.gameObject);
+            spawner.destroyMeteor();
+            Destroy(collision.gameObject);
+            danger.destroySign();
+        }
     }
 }
     

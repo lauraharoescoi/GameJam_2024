@@ -11,6 +11,7 @@ public class FactoryScript : MonoBehaviour
     private float timer;
 
     public GameObject metalObject;
+    public CounterScript textCounter;
 
     public void Start()
     {
@@ -26,6 +27,10 @@ public class FactoryScript : MonoBehaviour
         if(!processing)
         {
             minerals += 1;
+            textCounter.addFactoryMineral();
+            MaterialBehavior material = GameObject.Find("Material").GetComponent<MaterialBehavior>();
+            material.pickMaterial();
+            // GetComponent<MaterialBehavior>().pickMaterial();
         }
         
         if(minerals == 3)
@@ -49,7 +54,8 @@ public class FactoryScript : MonoBehaviour
                 minerals = 0;
                 processing = false;
                 GetComponent<SpriteRenderer>().color = Color.white;
-                Vector2 spawnPosition = new Vector2(2.39f, 0.12f);
+                textCounter.resetFactoryMineral();
+                Vector2 spawnPosition = new Vector2(1.17f, -2.1f);
                 Instantiate(metalObject, spawnPosition, Quaternion.identity);
         
             }

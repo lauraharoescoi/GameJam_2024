@@ -12,7 +12,8 @@ public class Metal : MonoBehaviour
     public GameObject metalObject;
     void Start()
     {
-        
+        //set rotation to z: -97.465
+        transform.Rotate(97, 0, -97.465f);
     }
 
     // Update is called once per frame

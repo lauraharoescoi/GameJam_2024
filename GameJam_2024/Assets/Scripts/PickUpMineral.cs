@@ -12,6 +12,8 @@ public class PersonatgeScr : MonoBehaviour
     public Sprite holdingMineralSprite;
     public Sprite holdingMetalSprite;
     public Sprite normalSprite;
+    public GameObject bulletPrefab;
+    public Transform FiringPoint;
     
 
     // Start is called before the first frame update
@@ -23,6 +25,22 @@ public class PersonatgeScr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R) && hasMineral)
+        {
+            Shoot();
+        }
+            
+    }
+
+    private void Shoot()
+    {
+        hasMineral = false;
+        Instantiate(bulletPrefab, FiringPoint.position, FiringPoint.rotation);
+        GetComponent<SpriteRenderer>().sprite = normalSprite;
+        
+        MaterialBehavior material = GameObject.Find("Material").GetComponent<MaterialBehavior>();
+        material.pickMaterial();
+        
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
