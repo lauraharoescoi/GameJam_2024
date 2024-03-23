@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class PersonatgeScr : MonoBehaviour
 {
-
     private bool hasMineral = false;
     private bool hasMetal = false;
     //sprite of the player with a mineral
@@ -14,22 +13,70 @@ public class PersonatgeScr : MonoBehaviour
     public Sprite normalSprite;
     public GameObject bulletPrefab;
     public Transform FiringPoint;
-    
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        GetComponent<SpriteRenderer>().sprite = normalSprite;
-    }
+    private GameObject interactableObject = null; // Objeto con el que el personaje puede interactuar
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && hasMineral)
+        if (Input.GetKeyDown(KeyCode.Space) && hasMineral)
         {
             Shoot();
         }
-            
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            InteractWithObject();
+        }
+    }
+
+    private void InteractWithObject()
+    {
+        if (interactableObject != null)
+        {
+            if (interactableObject.CompareTag("Mineral") && !hasMineral && !hasMetal)
+            {
+                Destroy(interactableObject);
+                GetComponent<SpriteRenderer>().sprite = holdingMineralSprite;
+                hasMineral = true;
+            }
+            else if (interactableObject.CompareTag("Factory") && hasMineral && !hasMetal)
+            {
+                FactoryScript factory = interactableObject.GetComponent<FactoryScript>();
+                factory.addMinerals();
+                hasMineral = false;
+                GetComponent<SpriteRenderer>().sprite = normalSprite;
+            }
+            else if (interactableObject.CompareTag("Metal") && !hasMetal && !hasMineral)
+            {
+                Destroy(interactableObject);
+                GetComponent<SpriteRenderer>().sprite = holdingMetalSprite;
+                hasMetal = true;
+            }
+            else if (interactableObject.CompareTag("Rocket") && hasMetal && !hasMineral)
+            {
+                RocketScript rocket = interactableObject.GetComponent<RocketScript>();
+                rocket.addMetals();
+                hasMetal = false;
+                GetComponent<SpriteRenderer>().sprite = normalSprite;
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Mineral") || collision.CompareTag("Metal") || collision.CompareTag("Factory") || collision.CompareTag("Rocket"))
+        {
+            interactableObject = collision.gameObject;
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject == interactableObject)
+        {
+            interactableObject = null;
+        }
     }
 
     private void Shoot()
@@ -37,55 +84,9 @@ public class PersonatgeScr : MonoBehaviour
         hasMineral = false;
         Instantiate(bulletPrefab, FiringPoint.position, FiringPoint.rotation);
         GetComponent<SpriteRenderer>().sprite = normalSprite;
-        
+
         MaterialBehavior material = GameObject.Find("Material").GetComponent<MaterialBehavior>();
         material.pickMaterial();
-        
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Mineral") && !hasMineral && !hasMetal)
-        {
-            Destroy(collision.gameObject);
-            MaterialBehavior material = GameObject.Find("Material").GetComponent<MaterialBehavior>();
-            material.pickMaterial();
-            GetComponent<SpriteRenderer>().sprite = holdingMineralSprite;
-
-            hasMineral = true;
-        }
-        if (collision.CompareTag("Factory") && hasMineral && !hasMetal)
-        {
-            FactoryScript factory = collision.GetComponent<FactoryScript>();
-            factory.addMinerals();
-            hasMineral = false;
-            GetComponent<SpriteRenderer>().sprite = normalSprite;
-        }
-        if (collision.CompareTag("Metal") && !hasMetal && !hasMineral)
-        {
-            Destroy(collision.gameObject);
-            GetComponent<SpriteRenderer>().sprite = holdingMetalSprite;
-            hasMetal = true;
-        }
-        if (collision.CompareTag("Rocket") && hasMetal && !hasMineral)
-        {
-            RocketScript rocket = collision.GetComponent<RocketScript>();
-            rocket.addMetals();
-            hasMetal = false;
-            GetComponent<SpriteRenderer>().sprite = normalSprite;
-        }
-    }
-
-    //if the player has a mineral and colides with the factory, the mineral is delivered
-
-
-    public bool getHasMineral()
-    {
-        return hasMineral;
-    }
-
-    public void SetHasMineral(bool hasMineral)
-    {
-        this.hasMineral = hasMineral;
     }
 }
+
