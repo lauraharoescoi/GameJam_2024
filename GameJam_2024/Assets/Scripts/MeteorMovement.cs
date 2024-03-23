@@ -6,11 +6,14 @@ using UnityEngine;
 public class MeteorMovement : MonoBehaviour
 {
     public float moveSpeed = 1;
+    public MeteorsScript spawner;
+    public DangerScript danger;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawner = GameObject.FindGameObjectWithTag("MeteorSpawner").GetComponent<MeteorsScript>();
+        danger = GameObject.FindGameObjectWithTag("dangerSign").GetComponent <DangerScript>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,8 @@ public class MeteorMovement : MonoBehaviour
         if(collision.CompareTag("Planet") && collision.gameObject.activeSelf)
         {
             Destroy(this.gameObject);
+            spawner.destroyMeteor();
+            danger.destroySign();
         }
     }
 }
