@@ -4,7 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class MeteorMovement : MonoBehaviour
+
 {
+    
     public float moveSpeed = 10f;
     public float lifeTime = 3f;
 
