@@ -9,6 +9,7 @@ public class RocketScript : MonoBehaviour
     
     public float processingTime;
     private float timer;
+    public CounterScript textCounter;
 
 
     public void Start()
@@ -25,8 +26,7 @@ public class RocketScript : MonoBehaviour
     public void addMetals()
     {
         metals += 1;
-		//print in the console the number of metals
-		print(metals);
+        textCounter.addRocketMetal();
 
 		if (metals == 3) {
 			isFinished = true;
