@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+   
+   private float moving;
+
     public float moveSpeed;
     // public Transform Personatge;
+    public Animator animator;
+    // Invocació animator controller
 
 
     void Start()
     {
-        
+        animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         RotateRocket();
+
+        if(Input.GetKeyDown(KeyCode.D)) {
+            animator.SetFloat("Run", 0);
+        } else if(Input.GetKeyDown(KeyCode.A))
+        {
+            animator.SetFloat("Run", 1);
+        }
+               
     }
 
     void RotateRocket ()
