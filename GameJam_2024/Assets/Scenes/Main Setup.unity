@@ -182,12 +182,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e8ac54b1669e2a743ac3aa0dd1d458de, type: 3}
+  m_Sprite: {fileID: -9095717837082945937, guid: f57a7d69144b23a4db5da4641667c73b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.6, y: 3}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -335,6 +335,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &902461135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902461137}
+  - component: {fileID: 902461136}
+  m_Layer: 0
+  m_Name: MeteorSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &902461136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902461135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286c6d98dbc1d4191c7a349b4504bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomObject: {fileID: 5106971522255615871, guid: 70dd2fcfede4cd948bae90123672160b, type: 3}
+  spawnTime: 0
+  radius: 4
+  offset: {x: 0, y: 0}
+--- !u!4 &902461137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902461135}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.76, y: 9.78, z: 0.043588866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1141406657
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +409,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141406657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7ab688f7c7b1954e8befb1b7bb80631, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c5833e91880e7e4cbcbcdbbf89f430a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 100
@@ -440,7 +488,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 680065ba6310e604c9100a70807b88c7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 535d8ca379a2efe4d8d00ec19e5bb04a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -508,3 +556,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 2138510649}
   - {fileID: 1141406659}
+  - {fileID: 902461137}
