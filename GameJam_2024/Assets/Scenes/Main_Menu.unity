@@ -419,8 +419,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Operaci\xF3: Gravitar"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6557f1539feadf1458002dba0e9e15c8, type: 2}
+  m_sharedMaterial: {fileID: -287173794913582221, guid: 6557f1539feadf1458002dba0e9e15c8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -480,7 +480,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -142.97449, w: -42.05139}
+  m_margin: {x: 0, y: 0, z: -289.19827, w: -42.05139}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -724,7 +724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 313, y: -464}
+  m_AnchoredPosition: {x: 304, y: -443}
   m_SizeDelta: {x: 788.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360632942
@@ -749,8 +749,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '"Espai" = disparar | "E" = agafar | Fletxes = moviment'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6557f1539feadf1458002dba0e9e15c8, type: 2}
+  m_sharedMaterial: {fileID: -287173794913582221, guid: 6557f1539feadf1458002dba0e9e15c8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -774,8 +774,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.7
-  m_fontSizeBase: 23.7
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 211.21667, w: 0}
+  m_margin: {x: 0, y: 0, z: 188.04277, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
