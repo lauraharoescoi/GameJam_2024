@@ -22,7 +22,6 @@ public class PersonatgeScr : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        newgameObject = GetComponentInChildren<GameObject>();
         newgameObject.SetActive(false);
     }
 

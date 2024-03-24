@@ -15,7 +15,6 @@ public class MeteorMovement : MonoBehaviour
     {
         spawner = GameObject.FindGameObjectWithTag("MeteorSpawner").GetComponent<MeteorsScript>();
         danger = GameObject.FindGameObjectWithTag("dangerSign").GetComponent <DangerScript>();
-        fireMeteor = GameObject.FindGameObjectWithTag("fireMeteor");
     }
 
     // Update is called once per frame
@@ -29,7 +28,6 @@ public class MeteorMovement : MonoBehaviour
         Vector2 directionToCenter = (Vector2.zero + spawner.offset) - src;
         float angle = Mathf.Atan2(directionToCenter.y, directionToCenter.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90)); 
-        fireMeteor.transform.rotation = rotation;
 
     }
 
@@ -38,13 +36,13 @@ public class MeteorMovement : MonoBehaviour
         if(collision.CompareTag("Planet"))
         {
             Destroy(this.gameObject);
-            spawner.destroyMeteor();
+            spawner.destroyMeteor(true);
             danger.destroySign();
         }
         if (collision.CompareTag("Bullet"))
         {
             Destroy(this.gameObject);
-            spawner.destroyMeteor();
+            spawner.destroyMeteor(false);
             Destroy(collision.gameObject);
             danger.destroySign();
         }
