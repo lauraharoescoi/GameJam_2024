@@ -10,6 +10,9 @@ public class RocketScript : MonoBehaviour
     public float processingTime;
     private float timer;
     public CounterScript textCounter;
+    //Audio
+    public AudioSource src;
+    public AudioClip sfx1;
 
 
     public void Start()
@@ -27,8 +30,11 @@ public class RocketScript : MonoBehaviour
     {
         metals += 1;
         textCounter.addRocketMetal();
+        //Audio
+        src.clip = sfx1;
+        src.Play();
 
-		if (metals == 3) {
+        if (metals == 3) {
 			isFinished = true;
 		}
     }

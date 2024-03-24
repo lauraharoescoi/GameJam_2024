@@ -18,6 +18,11 @@ public class PersonatgeScr : MonoBehaviour
     public GameObject newgameObject;
 
     private GameObject interactableObject = null; // Objeto con el que el personaje puede interactuar
+                                                  //Audio
+                                                  //Audio
+    public AudioSource src;
+    public AudioClip sfx1, sfx2;
+
 
     void Start()
     {
@@ -32,6 +37,14 @@ public class PersonatgeScr : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && hasMineral)
         {
             Shoot();
+            //Audio
+            src.clip = sfx1;
+            src.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && hasMineral == false){
+            //Audio
+            src.clip = sfx2;
+            src.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E))

@@ -13,6 +13,10 @@ public class FactoryScript : MonoBehaviour
     public GameObject metalObject;
     public CounterScript textCounter;
 
+    //Audio
+    public AudioSource src;
+    public AudioClip sfx1, sfx2;
+
     public void Start()
     {
         processing = false;
@@ -30,12 +34,21 @@ public class FactoryScript : MonoBehaviour
             textCounter.addFactoryMineral();
             MaterialBehavior material = GameObject.Find("Material").GetComponent<MaterialBehavior>();
             material.pickMaterial();
+
+
             // GetComponent<MaterialBehavior>().pickMaterial();
+
+            //Audio
+            src.clip = sfx1;
+            src.Play();
         }
         
         if(minerals == 3)
         {
             processing = true;
+            //Audio
+            src.clip = sfx2;
+            src.Play();
         }
     }
 
