@@ -10,6 +10,8 @@ public class FactoryScript : MonoBehaviour
     public float processingTime;
     private float timer;
 
+    public Animator SquashStretch;
+
     public GameObject metalObject;
     public CounterScript textCounter;
 
@@ -46,14 +48,15 @@ public class FactoryScript : MonoBehaviour
             if(timer < processingTime)
             {
                 timer += Time.deltaTime;
-                GetComponent<SpriteRenderer>().color = Color.red;
+                //GetComponent<SpriteRenderer>().color = Color.red;
+                SquashStretch.SetTrigger("FactoryWorks");
             }
             else
             {
                 timer = 0;
                 minerals = 0;
                 processing = false;
-                GetComponent<SpriteRenderer>().color = Color.white;
+                GetComponentInChildren<SpriteRenderer>().color = Color.white;
                 textCounter.resetFactoryMineral();
                 Vector2 spawnPosition = new Vector2(1.17f, -2.1f);
                 Instantiate(metalObject, spawnPosition, Quaternion.identity);

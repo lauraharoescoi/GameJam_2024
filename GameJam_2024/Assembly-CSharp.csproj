@@ -60,13 +60,52 @@
     <Analyzer Include="D:\Games\Unity\Hub\Editor\2022.3.22f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakables\ShakableCanvas.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\Structures\RangeFloat.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakables\ShakableTransform2D.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\CameraShakerHandler.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\ShakeData.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Demo\Scripts\Resettable.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\InvertibleAxes.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Demo\Scripts\PerfMonitor.cs" />
+    <Compile Include="Assets\Scripts\DangerScript.cs" />
+    <Compile Include="Assets\Scripts\MaterialBehavior.cs" />
+    <Compile Include="Assets\Scripts\PickUpMineral.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\Vectors.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\ShakerInstance.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakables\ShakableRigidbody2D.cs" />
     <Compile Include="Assets\Art\PixelArtFilter.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakers\ObjectShaker.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakables\ShakableRigidbody.cs" />
     <Compile Include="Assets\Scripts\PlanetGravity.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\EditorRuntime\BitMaskAttribute.cs" />
+    <Compile Include="Assets\Scripts\MeteorsScript.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\Transforms.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\Floats.cs" />
+    <Compile Include="Assets\Scripts\prova.cs" />
+    <Compile Include="Assets\Scripts\CounterScript.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\Ints.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\DDOL.cs" />
+    <Compile Include="Assets\Scripts\Factory.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\Structures\RangeInt.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\EventArgs.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\Arrays.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakables\ShakableBase.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakers\CameraShaker.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Demo\Scripts\CanvasButtonActions.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakables\ShakableTransform.cs" />
+    <Compile Include="Assets\Scripts\Metal.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\ObjectShakerHandler.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Demo\Scripts\Rock.cs" />
     <Compile Include="Assets\Scripts\Rocket.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\FrameRateCalculator.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\Utilities\Enums.cs" />
     <Compile Include="Assets\Scripts\ScriptPersonatge.cs" />
+    <Compile Include="Assets\Scripts\MeteorMovement.cs" />
+    <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Demo\Scripts\Box.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\COPY SPRIGHT\Comic Battle Royale\2D Character - Astronaut\Documentation.txt" />
     <None Include="Assets\Art\PixelArtFilter.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -1030,6 +1069,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1044,10 +1087,6 @@
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
