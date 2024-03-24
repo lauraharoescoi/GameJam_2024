@@ -17,14 +17,16 @@ public class PersonatgeScr : MonoBehaviour
     public AudioClip shootSound, errorSound, pickSound, factorySound, rocketSound;
 
     public Animator animator;
-    public GameObject newgameObject;
+    public GameObject mineralObject;
+    public GameObject metalObject;
 
     private GameObject interactableObject = null; // Objeto con el que el personaje puede interactuar
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        newgameObject.SetActive(false);
+        mineralObject.SetActive(false);
+        metalObject.SetActive(false);
     }
 
     
@@ -46,15 +48,23 @@ public class PersonatgeScr : MonoBehaviour
             InteractWithObject();
         }
 
-        animator.SetBool("Holding", hasMineral);
-        if (hasMineral == false)
+        animator.SetBool("Holding", hasMineral || hasMetal);
+        if (hasMineral == false && hasMetal == false)
         {
-            newgameObject.SetActive(false);
+            mineralObject.SetActive(false);
+            metalObject.SetActive(false);
         }
-        else
+        else if (hasMineral == true && hasMetal == false)
         {
-            newgameObject.SetActive(true);
+            mineralObject.SetActive(true);
+            metalObject.SetActive(false);
         }
+        else if (hasMineral == false && hasMetal == true)
+        {
+            mineralObject.SetActive(false);
+            metalObject.SetActive(true);
+        }
+        
     }
 
     private void InteractWithObject()

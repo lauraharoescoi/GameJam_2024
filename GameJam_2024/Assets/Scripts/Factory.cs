@@ -55,7 +55,7 @@ public class FactoryScript : MonoBehaviour
                 processing = false;
                 GetComponent<SpriteRenderer>().color = Color.white;
                 textCounter.resetFactoryMineral();
-                Vector2 spawnPosition = new Vector2(1.17f, -2.1f);
+                Vector2 spawnPosition = new Vector2(1.68f, -2.51f);
                 Instantiate(metalObject, spawnPosition, Quaternion.identity);
         
             }
