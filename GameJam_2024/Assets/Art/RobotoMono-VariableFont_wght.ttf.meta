@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64015c72e4e22904b956572b1d9cd939
+guid: 4828b832fae84fe4594a01ee857b018c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Inconsolata UltraExpanded
+  - Roboto Mono
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
