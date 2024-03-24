@@ -406,7 +406,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 29.6, y: 12.4}
-  m_SizeDelta: {x: 450, y: 50}
+  m_SizeDelta: {x: 755, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1435737949
 MonoBehaviour:
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeStart: 2
-  timeBtwChars: 0.1
+  timeBtwChars: 0.04
   leadingChar: 
   leadingCharBeforeDelay: 0
 --- !u!114 &1435737950
@@ -444,12 +444,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ID de Missi\xF3: #D3_4411\nResponsable: Miner Espacial homologat per la
-    G.R.E.A.\nCodi d'identificaci\xF3: 22311223T (alias Nil)\nObjectiu: Aconseguir
+  m_text: "- ID de Missi\xF3: #D3_4411\n- Responsable: Miner Espacial homologat per
+    la G.R.E.A.\n- Codi d'identificaci\xF3: 22311223T (alias Nil).\n- Objectiu: Aconseguir
     X unitats de metall preci\xF3s de la lluna pletoriana i evacuar l'estaci\xF3
-    d'extracci\xF3.\nPerills: pluja d'asteroides imminent. Procedir amb rapidesa.\nEspecificacions:
-    s'ha autoritzat l'\xFAs del can\xF3 gravitacional temporalment per la defensa
-    de la base"
+    d'extracci\xF3.\n- Perills: pluja d'asteroides imminent. Procedir amb rapidesa.\n-
+    Especificacions: s'ha autoritzat l'\xFAs del can\xF3 gravitacional temporalment
+    per la defensa de la base."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5aebdc2e3a21d7848b6dc78e3cb28ede, type: 2}
   m_sharedMaterial: {fileID: -287173794913582221, guid: 5aebdc2e3a21d7848b6dc78e3cb28ede, type: 2}
@@ -476,8 +476,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11
-  m_fontSizeBase: 11
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
-  m_verticalMapping: 0
+  m_verticalMapping: 1
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
   m_IsTextObjectScaleStatic: 0
@@ -562,7 +562,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 62.37}
-  m_SizeDelta: {x: 400, y: 50}
+  m_SizeDelta: {x: 711.4, y: 222.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619158229
 MonoBehaviour:
@@ -611,8 +611,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
-  m_fontSizeBase: 21
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
