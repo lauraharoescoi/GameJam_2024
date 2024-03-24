@@ -8,6 +8,7 @@ public class MeteorsScript : MonoBehaviour
     public GameObject meteor;
     public GameObject dangerSign;
     public SpriteRenderer planet;
+    public GameObject gameOver;
     public Sprite[] planets;
     private int index;
 
@@ -22,6 +23,7 @@ public class MeteorsScript : MonoBehaviour
     private float limitMeteors = 1;
 
     private float counter = 0;
+    
 
    
     void Start()
@@ -31,6 +33,7 @@ public class MeteorsScript : MonoBehaviour
         planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<SpriteRenderer>();
         index = 0;
         planet.GetComponent<SpriteRenderer>().sprite = planets[index];
+        gameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -65,10 +68,15 @@ public class MeteorsScript : MonoBehaviour
     public void destroyMeteor(bool planetDestroyed)
     {
         counter--;
-        if (planetDestroyed)
+        if (planetDestroyed && index < planets.Length - 1)
         {
             index++;
             planet.GetComponent<SpriteRenderer>().sprite = planets[index];
+        } else if (planetDestroyed && index == planets.Length - 1)
+        {
+            //game over screen
+            gameOver.SetActive(true);
+
         }
     }
 }

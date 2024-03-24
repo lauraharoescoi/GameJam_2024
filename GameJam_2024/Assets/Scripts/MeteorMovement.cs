@@ -18,7 +18,6 @@ public class MeteorMovement : MonoBehaviour
         danger = GameObject.FindGameObjectWithTag("dangerSign").GetComponent <DangerScript>();
         //explision is a child of the meteor
         explotion = this.transform.GetChild(0).gameObject;
-        print(explotion);
         explotion.SetActive(false);
     }
 
