@@ -22,9 +22,9 @@ public class MeteorsScript : MonoBehaviour
     private float limitMeteors = 1;
 
     private float counter = 0;
-    
 
-   
+
+
     void Start()
     {
         //Set the spawn time to a random value between 5 and 10 seconds

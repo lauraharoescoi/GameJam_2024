@@ -9,6 +9,8 @@ public class MeteorMovement : MonoBehaviour
     public MeteorsScript spawner;
     public DangerScript danger;
     public GameObject fireMeteor;
+    public AudioSource src;
+    public AudioClip sfx1;
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +39,16 @@ public class MeteorMovement : MonoBehaviour
     {
         if(collision.CompareTag("Planet"))
         {
+
             Destroy(this.gameObject);
             spawner.destroyMeteor();
             danger.destroySign();
         }
         if (collision.CompareTag("Bullet"))
         {
+            //Audio
+            src.clip = sfx1;
+            src.Play();
             Destroy(this.gameObject);
             spawner.destroyMeteor();
             Destroy(collision.gameObject);

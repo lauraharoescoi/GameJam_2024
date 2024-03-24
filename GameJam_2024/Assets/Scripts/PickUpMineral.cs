@@ -21,7 +21,7 @@ public class PersonatgeScr : MonoBehaviour
                                                   //Audio
                                                   //Audio
     public AudioSource src;
-    public AudioClip sfx1, sfx2;
+    public AudioClip sfx1, sfx2, sfx3;
 
 
     void Start()
@@ -41,15 +41,18 @@ public class PersonatgeScr : MonoBehaviour
             src.clip = sfx1;
             src.Play();
         }
-        if (Input.GetKeyDown(KeyCode.Space) && hasMineral == false){
+        else if (Input.GetKeyDown(KeyCode.Space) && hasMineral == false)
+        {
             //Audio
             src.clip = sfx2;
             src.Play();
         }
+        
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             InteractWithObject();
+
         }
 
         animator.SetBool("Holding", hasMineral);
@@ -72,6 +75,9 @@ public class PersonatgeScr : MonoBehaviour
                 Destroy(interactableObject);
                 GetComponent<SpriteRenderer>().sprite = holdingMineralSprite;
                 hasMineral = true;
+                //Audio
+                src.clip = sfx3;
+                src.Play();
             }
             else if (interactableObject.CompareTag("Factory") && hasMineral && !hasMetal)
             {
@@ -85,6 +91,9 @@ public class PersonatgeScr : MonoBehaviour
                 Destroy(interactableObject);
                 GetComponent<SpriteRenderer>().sprite = holdingMetalSprite;
                 hasMetal = true;
+                //Audio
+                src.clip = sfx3;
+                src.Play();
             }
             else if (interactableObject.CompareTag("Rocket") && hasMetal && !hasMineral)
             {
