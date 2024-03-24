@@ -17,6 +17,7 @@ public class RocketScript : MonoBehaviour
     public GameObject text1;
     public GameObject text2;
     public float moveSpeed = 1;
+    public GameObject winText;
 
 
     public void Start()
@@ -30,6 +31,7 @@ public class RocketScript : MonoBehaviour
         text2.SetActive(true);
         this.GetComponent<SpriteRenderer>().enabled = true;
         personatge.GetComponent<SpriteRenderer>().enabled = true;
+        winText.SetActive(false);
 
     }
 
@@ -41,9 +43,14 @@ public class RocketScript : MonoBehaviour
             text1.SetActive(false);
             text2.SetActive(false);
 
-            Vector2 src = launchRocket.transform.position;
-            Vector2 dst = new Vector2(-0.05f, 4.41f);
-            launchRocket.transform.position = Vector2.MoveTowards(src, dst, moveSpeed * Time.deltaTime);
+            Vector3 src = launchRocket.transform.position;
+            Vector3 dst = new Vector3(-0.05f, 4.41f, 0);
+            launchRocket.transform.position = Vector3.MoveTowards(src, dst, moveSpeed * Time.deltaTime);
+            //wait for rocket to reach destination
+            if (launchRocket.transform.position == dst)
+            {
+                winText.SetActive(true);
+            }
         }
     }
     public void addMetals()
@@ -53,6 +60,7 @@ public class RocketScript : MonoBehaviour
 
 		if (metals == maxMetals) {
 			isFinished = true;
+
 		}
     }
 
