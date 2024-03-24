@@ -9,6 +9,8 @@ public class MeteorsScript : MonoBehaviour
     public GameObject dangerSign;
     public SpriteRenderer planet;
     public GameObject gameOver;
+    public AudioSource audioSource;
+    
     public Sprite[] planets;
     private int index;
 
@@ -68,6 +70,7 @@ public class MeteorsScript : MonoBehaviour
     public void destroyMeteor(bool planetDestroyed)
     {
         counter--;
+        audioSource.Play();
         if (planetDestroyed && index < planets.Length - 1)
         {
             index++;
