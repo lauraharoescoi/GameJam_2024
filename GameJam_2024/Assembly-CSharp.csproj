@@ -80,6 +80,7 @@
     <Compile Include="Assets\Art\FirstGearGames\SmoothCameraShaker\Scripts\Shakables\ShakableRigidbody.cs" />
     <Compile Include="Assets\Scripts\PlanetGravity.cs" />
     <Compile Include="Assets\Art\FirstGearGames\Utilities\EditorRuntime\BitMaskAttribute.cs" />
+    <Compile Include="Assets\RotationsBG.cs" />
     <Compile Include="Assets\Scripts\MeteorsScript.cs" />
     <Compile Include="Assets\Art\FirstGearGames\Utilities\Transforms.cs" />
     <Compile Include="Assets\Art\FirstGearGames\Utilities\Floats.cs" />
