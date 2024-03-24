@@ -1636,7 +1636,7 @@ GameObject:
   - component: {fileID: 908287497}
   m_Layer: 0
   m_Name: Mask
-  m_TagString: Untagged
+  m_TagString: mask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3434,7 +3434,7 @@ PrefabInstance:
       objectReference: {fileID: 1390047754}
     - target: {fileID: 273183402654978797, guid: eeef282940badb64dba10075f643d91f, type: 3}
       propertyPath: maxMetals
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 273183402654978797, guid: eeef282940badb64dba10075f643d91f, type: 3}
       propertyPath: personatge

@@ -15,7 +15,7 @@ public class CounterScript : MonoBehaviour
         minerals = 0;
         metals = 0;
         factoryCounter.text = "0/3";
-        rocketCounter.text = "0/5";
+        rocketCounter.text = "0/3";
     }
     public void addFactoryMineral()
     {
@@ -31,7 +31,7 @@ public class CounterScript : MonoBehaviour
         if(metals < 5)
         {
             metals++;
-            rocketCounter.text = metals.ToString() + "/5";
+            rocketCounter.text = metals.ToString() + "/3";
         }
     }
 
@@ -44,6 +44,6 @@ public class CounterScript : MonoBehaviour
     public void resetRocketMetal()
     {
         metals = 0;
-        rocketCounter.text = metals.ToString() + "/5";
+        rocketCounter.text = metals.ToString() + "/3";
     }
 }

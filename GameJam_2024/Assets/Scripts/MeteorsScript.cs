@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline;
+// using UnityEditor.Timeline;
 using UnityEngine;
 
 public class MeteorsScript : MonoBehaviour
@@ -10,6 +10,9 @@ public class MeteorsScript : MonoBehaviour
     public SpriteRenderer planet;
     public GameObject gameOver;
     public AudioSource audioSource;
+    public GameObject rocket;
+    public GameObject personatge;
+    public GameObject mask;
     
     public Sprite[] planets;
     private int index;
@@ -33,6 +36,9 @@ public class MeteorsScript : MonoBehaviour
         //Set the spawn time to a random value between 5 and 10 seconds
         spawnTime = Time.time + Random.Range(5.0f, 10.0f);
         planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<SpriteRenderer>();
+        rocket = GameObject.FindGameObjectWithTag("Rocket");
+        personatge = GameObject.FindGameObjectWithTag("Player");
+        mask = GameObject.FindGameObjectWithTag("mask");
         index = 0;
         planet.GetComponent<SpriteRenderer>().sprite = planets[index];
         gameOver.SetActive(false);
@@ -78,7 +84,14 @@ public class MeteorsScript : MonoBehaviour
         } else if (planetDestroyed && index == planets.Length - 1)
         {
             //game over screen
-            gameOver.SetActive(true);
+             if(!rocket.GetComponent<RocketScript>().isFinished){
+
+                gameOver.SetActive(true);
+                personatge.GetComponent<SpriteRenderer>().enabled = false;
+                mask.GetComponent<SpriteMask>().enabled = false;
+                
+            }
+            
 
         }
     }

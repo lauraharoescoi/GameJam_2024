@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RocketScript : MonoBehaviour
 {
     private int metals;
-    private bool isFinished;
+    public bool isFinished;
     
     public float processingTime;
     private float timer;

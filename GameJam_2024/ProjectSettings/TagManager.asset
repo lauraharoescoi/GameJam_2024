@@ -18,6 +18,7 @@ TagManager:
   - launchRocket
   - Text1
   - Text2
+  - mask
   layers:
   - Default
   - TransparentFX
