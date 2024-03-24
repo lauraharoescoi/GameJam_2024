@@ -60,13 +60,22 @@
     <Analyzer Include="D:\Games\Unity\Hub\Editor\2022.3.22f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\DangerScript.cs" />
+    <Compile Include="Assets\Scripts\MaterialBehavior.cs" />
+    <Compile Include="Assets\Scripts\PickUpMineral.cs" />
     <Compile Include="Assets\Art\PixelArtFilter.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\PlanetGravity.cs" />
+    <Compile Include="Assets\Scripts\MeteorsScript.cs" />
+    <Compile Include="Assets\Scripts\prova.cs" />
+    <Compile Include="Assets\Scripts\CounterScript.cs" />
+    <Compile Include="Assets\Scripts\Factory.cs" />
+    <Compile Include="Assets\Scripts\Metal.cs" />
     <Compile Include="Assets\Scripts\Rocket.cs" />
     <Compile Include="Assets\Scripts\ScriptPersonatge.cs" />
+    <Compile Include="Assets\Scripts\MeteorMovement.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\COPY SPRIGHT\Comic Battle Royale\2D Character - Astronaut\Documentation.txt" />
     <None Include="Assets\Art\PixelArtFilter.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -1030,6 +1039,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1044,10 +1057,6 @@
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
