@@ -9,12 +9,17 @@ public class MeteorMovement : MonoBehaviour
     public MeteorsScript spawner;
     public DangerScript danger;
     public GameObject fireMeteor;
+    private GameObject explotion;
 
     // Start is called before the first frame update
     void Start()
     {
         spawner = GameObject.FindGameObjectWithTag("MeteorSpawner").GetComponent<MeteorsScript>();
         danger = GameObject.FindGameObjectWithTag("dangerSign").GetComponent <DangerScript>();
+        //explision is a child of the meteor
+        explotion = this.transform.GetChild(0).gameObject;
+        print(explotion);
+        explotion.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,7 +28,7 @@ public class MeteorMovement : MonoBehaviour
         Vector2 src = this.transform.position;
         Vector2 dst = new Vector2(0, 0);
         transform.position = Vector2.MoveTowards(src, dst, moveSpeed * Time.deltaTime);
-        transform.Rotate(Vector3.forward * 2);
+        transform.Rotate(Vector3.forward * 0.3f);
 
         Vector2 directionToCenter = (Vector2.zero + spawner.offset) - src;
         float angle = Mathf.Atan2(directionToCenter.y, directionToCenter.x) * Mathf.Rad2Deg;
@@ -35,13 +40,15 @@ public class MeteorMovement : MonoBehaviour
     {
         if(collision.CompareTag("Planet"))
         {
-            Destroy(this.gameObject);
+            explotion.SetActive(true);
+            Destroy(this.gameObject, 0.5f);
             spawner.destroyMeteor(true);
             danger.destroySign();
         }
         if (collision.CompareTag("Bullet"))
-        {
-            Destroy(this.gameObject);
+        {   
+            explotion.SetActive(true);
+            Destroy(this.gameObject, 0.5f);
             spawner.destroyMeteor(false);
             Destroy(collision.gameObject);
             danger.destroySign();
