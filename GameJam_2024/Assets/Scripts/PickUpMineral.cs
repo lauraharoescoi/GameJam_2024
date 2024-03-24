@@ -13,6 +13,8 @@ public class PersonatgeScr : MonoBehaviour
     public Sprite normalSprite;
     public GameObject bulletPrefab;
     public Transform FiringPoint;
+    public AudioSource src;
+    public AudioClip shootSound, errorSound, pickSound, factorySound, rocketSound;
 
     public Animator animator;
     public GameObject newgameObject;
@@ -31,6 +33,12 @@ public class PersonatgeScr : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && hasMineral)
         {
             Shoot();
+            src.clip = shootSound;
+            src.Play();
+        } else if (Input.GetKeyDown(KeyCode.Space) && !hasMineral)
+        {
+            src.clip = errorSound;
+            src.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -58,19 +66,26 @@ public class PersonatgeScr : MonoBehaviour
                 Destroy(interactableObject);
                 GetComponent<SpriteRenderer>().sprite = holdingMineralSprite;
                 hasMineral = true;
+                src.clip = pickSound;
+                src.Play();
             }
             else if (interactableObject.CompareTag("Factory") && hasMineral && !hasMetal)
             {
+                print("factory");
                 FactoryScript factory = interactableObject.GetComponent<FactoryScript>();
                 factory.addMinerals();
                 hasMineral = false;
                 GetComponent<SpriteRenderer>().sprite = normalSprite;
+                src.clip = factorySound;
+                src.Play();
             }
             else if (interactableObject.CompareTag("Metal") && !hasMetal && !hasMineral)
             {
                 Destroy(interactableObject);
                 GetComponent<SpriteRenderer>().sprite = holdingMetalSprite;
                 hasMetal = true;
+                src.clip = pickSound;
+                src.Play();
             }
             else if (interactableObject.CompareTag("Rocket") && hasMetal && !hasMineral)
             {
@@ -78,6 +93,8 @@ public class PersonatgeScr : MonoBehaviour
                 rocket.addMetals();
                 hasMetal = false;
                 GetComponent<SpriteRenderer>().sprite = normalSprite;
+                src.clip = rocketSound;
+                src.Play();
             }
         }
     }
