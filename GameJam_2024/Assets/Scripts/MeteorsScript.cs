@@ -73,6 +73,11 @@ public class MeteorsScript : MonoBehaviour
 
     }
 
+    public void meteorHasntExisted()
+    {
+        counter--;
+    }
+
     public void destroyMeteor(bool planetDestroyed)
     {
         counter--;

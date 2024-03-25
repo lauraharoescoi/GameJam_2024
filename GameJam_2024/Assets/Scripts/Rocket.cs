@@ -14,8 +14,11 @@ public class RocketScript : MonoBehaviour
     public CounterScript textCounter;
     public GameObject launchRocket;
     public GameObject personatge;
+    public GameObject metalPhoto;
+    public GameObject mineralPhoto;
     public GameObject text1;
     public GameObject text2;
+
     public float moveSpeed = 1;
     public GameObject winText;
 
@@ -27,21 +30,20 @@ public class RocketScript : MonoBehaviour
         personatge = GameObject.FindGameObjectWithTag("Player");
         text1 = GameObject.FindGameObjectWithTag("Text1");
         text2 = GameObject.FindGameObjectWithTag("Text2");
-        text1.SetActive(true);
-        text2.SetActive(true);
-        this.GetComponent<SpriteRenderer>().enabled = true;
-        personatge.GetComponent<SpriteRenderer>().enabled = true;
+        mineralPhoto = GameObject.FindGameObjectWithTag("MineralPhoto");
+        metalPhoto = GameObject.FindGameObjectWithTag("MetalPhoto");
         winText.SetActive(false);
-
     }
 
     public void Update()
     {
         if(isFinished) {
             this.GetComponent<SpriteRenderer>().enabled = false;
-            personatge.GetComponent<SpriteRenderer>().enabled = false;
+            personatge.SetActive(false);
             text1.SetActive(false);
             text2.SetActive(false);
+            mineralPhoto.SetActive(false);
+            metalPhoto.SetActive(false);
 
             Vector3 src = launchRocket.transform.position;
             Vector3 dst = new Vector3(-0.05f, 4.41f, 0);

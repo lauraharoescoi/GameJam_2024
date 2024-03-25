@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8254776027603899807}
   - component: {fileID: 4074693586001701007}
   - component: {fileID: 6260944000487207243}
+  - component: {fileID: 5022957714755844199}
   m_Layer: 0
   m_Name: MaterialSprite
   m_TagString: Mineral
@@ -158,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5022957714755844199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8708962440974393577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e73198d9d975df458565da166487afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
