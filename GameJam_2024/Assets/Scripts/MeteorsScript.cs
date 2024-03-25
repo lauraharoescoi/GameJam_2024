@@ -9,7 +9,8 @@ public class MeteorsScript : MonoBehaviour
     public GameObject dangerSign;
     public SpriteRenderer planet;
     public GameObject gameOver;
-    public AudioSource audioSource;
+    public AudioSource explosion;
+    public AudioSource warning;
     public GameObject rocket;
     public GameObject personatge;
     public GameObject mask;
@@ -68,6 +69,7 @@ public class MeteorsScript : MonoBehaviour
             Vector2 spawnPositionDanger = coor * radiusDangerSign + offset;
             Instantiate(meteor, spawnPositionMeteor, Quaternion.identity);
             Instantiate(dangerSign, spawnPositionDanger, Quaternion.identity);
+            warning.Play();
             counter++;
         }
 
@@ -81,7 +83,7 @@ public class MeteorsScript : MonoBehaviour
     public void destroyMeteor(bool planetDestroyed)
     {
         counter--;
-        audioSource.Play();
+        explosion.Play();
         if (planetDestroyed && index < planets.Length - 1)
         {
             index++;

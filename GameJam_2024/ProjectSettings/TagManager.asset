@@ -19,6 +19,10 @@ TagManager:
   - Text1
   - Text2
   - mask
+  - MineralSpawner
+  - MetalPhoto
+  - MineralPhoto
+  - mira
   layers:
   - Default
   - TransparentFX
@@ -67,4 +71,7 @@ TagManager:
     locked: 0
   - name: Cohet
     uniqueID: 952867003
+    locked: 0
+  - name: danger
+    uniqueID: 3534097229
     locked: 0
