@@ -23,6 +23,7 @@ TagManager:
   - MetalPhoto
   - MineralPhoto
   - mira
+  - dangerSIgn
   layers:
   - Default
   - TransparentFX
@@ -63,15 +64,18 @@ TagManager:
   - name: Behind
     uniqueID: 3218222525
     locked: 0
+  - name: danger
+    uniqueID: 3534097229
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Materials
+    uniqueID: 428688831
     locked: 0
   - name: Front
     uniqueID: 2177269717
     locked: 0
   - name: Cohet
     uniqueID: 952867003
-    locked: 0
-  - name: danger
-    uniqueID: 3534097229
     locked: 0
